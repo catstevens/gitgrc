@@ -12,6 +12,28 @@ https://docs.djangoproject.com/en/1.6/ref/settings/
 import os
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
+# DYNAMIC PATHS for TEMPLATES
+SETTINGS_DIR = os.path.dirname(__file__)
+PROJECT_PATH = os.path.join(SETTINGS_DIR, os.pardir) #Parent Directory
+PROJECT_PATH = os.path.abspath(PROJECT_PATH)
+TEMPLATE_PATH = os.path.join(PROJECT_PATH,'templates')
+#DATABASE_PATH = os.path.join(PROJECT_PATH,'rango.db')
+
+# STATIC SETTINGS
+STATIC_PATH = os.path.join(PROJECT_PATH,'static')
+
+STATICFILES_DIRS = (
+    STATIC_PATH,
+)
+
+# TEMPLATES
+TEMPLATE_DIRS = (
+    # Put strings here, Like "/home/html/django_templates" or "C:/www/django/templates".
+    # Always use forward slashes, even on Windows.
+    # Don't forget to use absolute paths, not relative paths.
+    TEMPLATE_PATH, #'/opt/django-projects/grcproj/templates/'
+)
+
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.6/howto/deployment/checklist/

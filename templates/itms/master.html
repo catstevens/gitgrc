@@ -1,0 +1,31 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="itms.css">
+    <title> {% block title %} {% endblock %} </title>
+</head>
+<body>
+    <h1>My Compliance website</h1>
+    {% block content %}{% endblock %}
+    {% block footer %}
+    <hr>
+    <div style="float:left;width=100%;">
+    <img src="itms_footer.png" width="968px" border="0" alt="" tyle="padding:0px; margin-lef:0px; float:left;"/>
+    </div>
+	<div id="cmsfooter" style="float:left;">
+	<div id="cmdfooter_left" style="padding-bottom:2px; padding-top:0px;">
+    <span> Insider Trading Management System </span>
+    </div>
+    <div id="cmsfooter_center">
+    <span style="font-size:7pt; color:#FFF;"> Copyright © 2014. Clonect Solutions. All Rights Reserved. </span>
+    </div>
+    <div class="cmsfooter_right">
+	<div style="float:left;padding:3px 4px 0px 0px;">
+	<span style="color: #FFF;font-size: 7pt;font-weight:bold;text-decoration:none;">Powered by</span>
+	</div>
+    <div style="float:left;">
+	<span style="font-family:Impact;font-size:10pt;color:#FFF;">clonect solutions</span></div>
+     </div>
+     </div>
+     {% endblock %}
+</html>
