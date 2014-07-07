@@ -1,16 +1,67 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+{% load static %} 
 <html lang="en">
 <head>
-    <link rel="stylesheet" type="text/css" href="itms.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'itms.css' %}">
     <title> {% block title %} {% endblock %} </title>
 </head>
 <body>
+<div id="cmswrapper" style="overflow:hidden;">
+    {% block header %}
+    <div id="cmsheader">
+    <div id="cmstop">
+	<img src="{% static 'logo_top2.png' %}" width="120px" border="0" alt="" style="padding:0px; margin-left:0px; float:left;"/>
+    </div>
+    <div id="cmsheader_top">
+	<span> Insider Trading MAnagement System</span>
+    </div>
+    <div class="divSearch">
+    <div style="float:left">
+	<input id="TextBoxSearch" name="TextBoxSearch" type="text" value="Search ..." maxlength="200" onfocus="if(this.value='Search ...') this.value='';" style="padding-left:6px;"/>
+    </div>
+    <div style="float:left;padding-left: 5px;background-color: #FFFFFF; height: 18px; width: 18px; border-top-right-radius: 4px; border-bottom-right-radius: 4px;">
+    <div style="padding-top:2px;">
+	<img src="{% static 'search_icon.png'%}" height="16px" width="11px" alt="">
+    </div>
+    </div>
+    </div>
+    <div id="logo_menu">
+    <div style="float:left; padding-top:12px;">
+    <div style="float:left;">
+	<img src="{% static 'user_icon.png'%}" alt="" height="17px" width="17px"/>
+    </div>
+    <div style="float:left; padding-left:2px;padding-right:0px; padding-top:2px;">
+	<span id="loggeduser" style="color:#FFF;font-size:9pt;"></span>
+    </div>
+    </div>
+    <div style="float:left;">
+    <ul>
+	<li id="lnkLogOut"> <a href="/itms/logout" class="link">Logout</a> </li>
+	<li class="list" id="lnkLogOut1" style="padding-right:0px;padding-left: 2px;">|</li>
+	<li> <a class="link">Help</a></li>
+	<li class="list" style="padding-right: 0px;padding-left: 2px;">|</li>
+	<li>
+	    <div id="login_settings_icon" style="float:left;">
+	    <div>
+		<img src="{% static 'login_settings.png'%}" height="20px" width="20px"/>
+	    </div>
+	    <div id="loginsetting_dropdown">
+		<div class="loginsetting_option"><a class="loginsetting_shadow" style="font-weight:normal;font-size:9pt;color:#15956D;text-shadow: 0 0px 0px rgba(0,0,0,0);" id="anchrChngPwd">Change Password</a></div>
+		<div class="loginsetting_option"><a class="loginsetting_shadow" style="font-weight:normal;font-size:9pt;color:#15956D;text-shadow: 0 0px 0px rgba(0,0,0,0);" id="anchrSearch">Search</a></div>
+		<div class="loginsetting_option"><a class="loginsetting_shadow" style="font-weight:normal;font-size:9pt;color:#15956D;text-shadow: 0 0px 0px rgba(0,0,0,0);" id="anchrEmpContact">Employee Contact</a></div>
+	    </div>
+	    </div>
+	</li>
+    </ul>
+    </div>
+    </div>
+    </div>
+    {% endblock %}
     <h1>My Compliance website</h1>
     {% block content %}{% endblock %}
     {% block footer %}
-    <hr>
     <div style="float:left;width=100%;">
-    <img src="itms_footer.png" width="968px" border="0" alt="" tyle="padding:0px; margin-lef:0px; float:left;"/>
+    <img src="{% static 'itms_footer.png' %}" width="968px" border="0" alt="" tyle="padding:0px; margin-left:0px; float:left;"/>
     </div>
 	<div id="cmsfooter" style="float:left;">
 	<div id="cmdfooter_left" style="padding-bottom:2px; padding-top:0px;">
@@ -28,4 +79,6 @@
      </div>
      </div>
      {% endblock %}
+</div>
+</body>
 </html>
