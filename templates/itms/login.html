@@ -1,0 +1,56 @@
+{% extends "itms/master.html" %}
+
+{% load static %}
+{% block title %}Login {% endblock %}
+
+{% block header %}
+<div id="cmsheader">
+    <div id="cmstop" style="padding-top:3px;">
+	<span>Insider Trading Management System</span>
+    </div>
+    <div id="logo_menu">
+	<ul> <li><a href="/itms/about.html" class="link">About us</a></li></ul>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div style="float:left;width:500px; margin-lef:52px;">
+    <img src="{% static 'rcms_logon.png' %}" alt="individual" width="75%" border="0" style="padding:55px 0px 0px 5px;"/>
+</div>
+<div style="float:left; padding-top:140px;">
+    <div class="login">
+    <h6 class="loginmember"> <span style="padding-left:38px;">Login</span> </h6>
+    <div style="margin-top:25px; margin-left:10px;">
+	<div style="float:left; width:62px;">
+	    <span>Username:</span>
+	</div>
+	<div style="float:left; margin-left:10px;">
+	    <input id="txtUserName" type="text" class="cmsloginInput"/>
+	</div>
+    </div>
+    <div style="float:left; width:100%; padding-left:90px;">
+	<br/>
+    </div>
+
+    <div style="margin-top:25px; margin-left:10px;">
+	<div style="float:left; width:62px;">
+	    <span>Password:</span>
+	</div>
+	<div style="float:left; margin-left:10px;">
+	    <input id="txtPassword" type="password" class="cmsloginInput"/>
+	</div>
+    </div>
+    <div style="float:left; width:100%; padding-left:90px;">
+	<br/>
+    </div>
+
+    <div style="margin-top:10px; margin-left:125px;">
+	<input id="btnSubmit" type="submit" value="Login" class="Configbutton"/>
+    </div>
+    <br/>
+    <br/>
+
+    </div>
+</div>
+{% endblock %}

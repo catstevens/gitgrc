@@ -10,3 +10,7 @@ import datetime
 def home(request):
     current_date = datetime.datetime.now()
     return render_to_response('itms/home.html', locals())
+
+def login(request):
+    current_date = datetime.datetime.now()
+    return render_to_response('itms/login.html', locals())
